@@ -1,12 +1,21 @@
 const logForm = document.getElementById("login_form");
 const logFormInput = logForm.querySelector("input");
+const logMess = document.getElementById("login_ms");
 
-function logON(eve){
+
+
+function logSubmit(eve){
   eve.preventDefault();
-  const message = document.getElementById("login_ms");
-  message.innerText = `Have a nice day, ${logFormInput}`;
+  logON(logFormInput.value);
+}
 
-  localStorage.setItem("LOGIN", logFormInput);
+function logON(logID){
+  logMess.innerText = `Have a nice day, ${logID}`;
+
+  localStorage.setItem("LOGIN", logID);
 }
 
 logForm.addEventListener("submit", logON);
+
+const localID = localStorage.getItem("LOGIN");
+if (localID !== null) {logON(localID);}

@@ -11,8 +11,8 @@ function Clock(event) {
   hour.innerText = getHour;
   minute.innerText = getMinute;
 
-  const clockBlink = document.createElement("span:nth-child(2)");
-  clockBlink.classList.toggle("blink");
+  // const clockBlink = document.createElement("span:nth-child(2)");
+  // clockBlink.classList.toggle("blink");
 }
 
 Clock();
