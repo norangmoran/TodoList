@@ -12,8 +12,8 @@ const localsuccCNT = localStorage.getItem(KEY_SUCCCNT);
 
 if (localsuccCNT) {
   succCNT = localsuccCNT;
-  succ.innerHTML = succCNT;
 }
+succ.innerHTML = succCNT;
 
 function TDsave(){
   localStorage.setItem(KEY_TDARR, JSON.stringify(TDarr));
