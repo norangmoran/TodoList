@@ -1,5 +1,5 @@
 const loginForm = document.querySelector("#login");
-const workForm = document.querySelector("#work");
+const workbench = document.querySelector("#work");
 
 const CLASS_HIDE = "hide";
 
@@ -14,7 +14,9 @@ function login(id){
   localStorage.setItem("login_ID", id);
 
   loginForm.classList.add(CLASS_HIDE);
-  workForm.classList.remove(CLASS_HIDE);
+  workbench.classList.remove(CLASS_HIDE);
+
+  workbench.querySelector("h3").innerHTML = `도와주셔서 감사합니다, ${id}님!<br/>무엇을 하실건가요?`;
 }
 
 loginForm.addEventListener("submit", login_submit);
