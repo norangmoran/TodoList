@@ -10,7 +10,7 @@ function onGeoOK(position){
   fetch(url).then(Response => Response.json()).then(data => {
     // console.log(data.name, data.weather[0].main);
     const icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    localInfo.innerHTML = `${data.weather[0].main}<img src="${icon}" style="height: 45px; width: auto;">   ${data.sys.country} ${data.main.temp}&#8451;`;
+    localInfo.innerHTML = `${data.weather[0].main}<img src="${icon}">   ${data.sys.country} ${data.main.temp}&#8451;`;
   });
 }
 function onGeoErr(){
